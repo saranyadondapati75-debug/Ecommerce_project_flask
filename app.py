@@ -32,7 +32,7 @@ mydb = connection.MySQLConnection(user='flaskuser', password='password',
                                  host='localhost',
                                  database='flaskdb')
 app=Flask(__name__)
-CORS(app,supports_credentials=True,origins=["https://ecommerce-project-frontend-gray.vercel.app/"])
+CORS(app,supports_credentials=True,origins=["https://ecommerce-project-frontend-gray.vercel.app"])
 app.secret_key="code@123"
 app.config['SESSION_TYPE']='filesystem'
 # 2. Session Cookie Settings for Modern Cross-Origin Compliance
