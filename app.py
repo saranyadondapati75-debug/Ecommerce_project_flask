@@ -38,8 +38,8 @@ app.config['SESSION_TYPE']='filesystem'
 # 2. Session Cookie Settings for Modern Cross-Origin Compliance
 # Set to 'None' to allow cookies to be sent over cross-site requests.
 # Note: SameSite='None' MANDATORILY requires Secure=True (HTTPS).
-app.config['SESSION_COOKIE_SAMESITE'] = 'Lax'
-app.config['SESSION_COOKIE_SECURE'] = False  # Must be True in production (HTTPS)
+app.config['SESSION_COOKIE_SAMESITE'] = 'None'
+app.config['SESSION_COOKIE_SECURE'] = True  # Must be True in production (HTTPS)
 app.config['SESSION_COOKIE_HTTPONLY'] = True  # Protects against XSS scripts reading the cookie
 app.config['PERMANENT_SESSION_LIFETIME']=timedelta(days=1)
 app.config['UPLOAD_FOLDER']=static_path
